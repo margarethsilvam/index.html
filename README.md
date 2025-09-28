@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -8,10 +8,10 @@
     <style>
         :root {
             --bg-light: #ffffff;
-            --text-dark: #212529; /* Darker Charcoal for more intensity */
+            --text-dark: #212529; 
             --text-medium: #495057;
-            --accent-color: #8D4C85; /* Deeper Orchid/Plum for intensity */
-            --accent-light-color: #F6F2F8; /* Pale Lavender */
+            --accent-color: #8D4C85; 
+            --accent-light-color: #F6F2F8; 
             --border-color: #dee2e6;
         }
 
@@ -88,6 +88,12 @@
             grid-template-columns: 1fr 1fr;
             gap: 40px;
         }
+        
+        .experience-grid {
+             display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px 40px;
+        }
 
         .section-title {
             font-size: 1.3em;
@@ -108,7 +114,7 @@
             border-radius: 2px;
         }
         
-        .profile p, .pertinence-section p, .job-description {
+        .profile p, .pertinence-section p, .job-description, .merit-item p {
             font-size: 1em;
             line-height: 1.7;
             color: var(--text-medium);
@@ -127,9 +133,13 @@
             margin-top: 0;
             font-size: 1.2em;
         }
-        .pertinence-section strong {
+        .pertinence-section strong, .profile strong, .merit-item strong {
             font-weight: 600;
-            color: var(--accent-color);
+            color: var(--text-dark);
+        }
+        .job-description strong {
+            font-weight: 600;
+            color: var(--text-medium);
         }
 
         .skills-list {
@@ -152,18 +162,31 @@
             line-height: 1.1;
         }
         
+        .merit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 1.5rem;
+        }
+        .merit-item svg {
+            flex-shrink: 0;
+            width: 36px; /* Increased icon size */
+            height: 36px; /* Increased icon size */
+            color: var(--accent-color);
+            margin-top: 4px;
+        }
+        
         .job {
-            margin-bottom: 30px;
             padding-bottom: 20px;
             border-bottom: 1px solid var(--border-color);
         }
-        .job:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
+        
+        .experience-grid .job {
+             border-bottom: 1px solid var(--border-color);
         }
 
         .job-company {
-            font-size: 1.15em;
+            font-size: 1.1em;
             font-weight: 700;
             color: var(--text-dark);
             margin: 0;
@@ -231,7 +254,7 @@
             <div class="profile">
                 <h3 class="section-title">Perfil Directivo</h3>
                 <p>
-                    Abogada y Magíster con más de 20 años de experiencia ejerciendo la <strong>dirección estratégica</strong> de entidades complejas del Estado. Mi carrera se distingue por liderar transformaciones integrales, con competencias probadas en la <strong>gestión de crisis presupuestal</strong>, la <strong>formulación de políticas públicas</strong> y el <strong>diseño organizacional</strong> para la modernización del sector público.
+                    Abogada y Magíster con una carrera de más de 20 años <strong>dedicada íntegramente al servicio público</strong>, ejerciendo la <strong>dirección estratégica</strong> de entidades complejas del Estado. Mi trayectoria se distingue por liderar transformaciones integrales, con competencias probadas en la <strong>gestión de crisis presupuestal</strong>, la <strong>formulación de políticas públicas</strong> y el <strong>diseño organizacional</strong> para la modernización del sector.
                 </p>
             </div>
             <div class="pertinence-section">
@@ -247,22 +270,36 @@
 
         <section class="section grid-section">
             <div>
-                <h3 class="section-title">Competencias Estratégicas</h3>
-                <ul class="skills-list">
-                    <li>Dirección y Gerencia Estratégica</li>
-                    <li>Alta Gerencia Financiera y Presupuestal</li>
-                    <li>Formulación de Políticas Públicas y Normatividad</li>
-                    <li>Diseño y Transformación Organizacional</li>
-                    <li>Implementación de Tecnología e IA en la Gestión Pública</li>
-                    <li>Gobernanza Corporativa y Liderazgo de Equipos</li>
-                    <li>Contratación Estatal de Alta Complejidad</li>
-                </ul>
+                <h3 class="section-title">Logros y Méritos Destacados</h3>
+                <div class="merit-section">
+                    <div class="merit-item">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Lista de Elegibles para Magistratura</h4>
+                            <p>He cumplido todos los requisitos para integrar la <strong>lista de elegibles</strong> de la Convocatoria No. 27 para el cargo de <strong>Magistrada de Tribunal Administrativo</strong>, tras haber superado satisfactoriamente la prueba de conocimientos y el curso de formación judicial.</p>
+                        </div>
+                    </div>
+                     <div class="merit-item">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10m4 4s1 1 2 1m3-3s-1-1-2-1m-2-4s1 0 1-1a4 4 0 00-8 0c0 1 1 1 1 1z"></path></svg>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Sello Equipares (INVIAS)</h4>
+                            <p>Lideré la transformación que culminó con la obtención de esta certificación en equidad laboral.</p>
+                        </div>
+                    </div>
+                    <div class="merit-item">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Desempeño Institucional (ICETEX)</h4>
+                            <p>Bajo mi gestión, la entidad alcanzó el <strong>5º puesto a nivel nacional</strong> en el Índice de Desempeño Institucional en 2021.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div>
                 <h3 class="section-title">Formación Académica</h3>
                 <div class="education-item">
                     <p class="degree">Magíster en Gobierno y Políticas Públicas</p>
-                    <p class="institution">Universidad Externado de Colombia</p>
+                    <p class="institution">Univ. Externado de Colombia, en convenio con Columbia University (SIPA)</p>
                 </div>
                 <div class="education-item">
                     <p class="degree">Especialización en Derecho Contractual</p>
@@ -285,48 +322,55 @@
 
         <section class="section">
             <h3 class="section-title">Trayectoria de Liderazgo Estratégico</h3>
-            
-            <div class="job">
-                <p class="job-company">Ministerio de Justicia y del Derecho</p>
-                <p class="job-title">Directora Jurídica</p>
-                <p class="job-period">2025 - Actualidad</p>
-                <p class="job-description">Ejerzo la dirección estratégica en la <strong>formulación de políticas públicas y normatividad</strong> del sector. Actualmente estoy liderando la implementación de herramientas de automatización e <strong>Inteligencia Artificial</strong> para acelerar procesos de cobro coactivo.</p>
-            </div>
-            <div class="job">
-                <p class="job-company">Instituto Nacional de Vías - INVIAS</p>
-                <p class="job-title">Secretaria General</p>
-                <p class="job-period">2023 - 2025</p>
-                <p class="job-description">Asumí la dirección estratégica de la entidad durante una crisis de déficit presupuestal. Lideré la <strong>planeación y ejecución presupuestal</strong>, incluyendo el trámite de <strong>empréstitos</strong> y el diseño de estrategias para optimizar el flujo de caja. Mi gestión resultó en una <strong>reducción sustancial del déficit</strong>, permitiendo superar momentos críticos de cesación de pagos sin efectos adversos. Paralelamente, lideré la transformación cultural que culminó con la obtención del Sello 'Equipares' y finalicé en tiempo récord el concurso de méritos que vinculó a más de 300 funcionarios de carrera.</p>
-            </div>
-            <div class="job">
-                 <p class="job-company">Ministerio de Tecnologías de la Información y las Comunicaciones</p>
-                <p class="job-title">Jefe de la Oficina de Fomento Regional de las TIC</p>
-                <p class="job-period">2022 - 2023</p>
-                <p class="job-description">Articulé la política nacional de TIC en los territorios, asesorando a gobernaciones y alcaldías en la <strong>formulación de planes regionales</strong> para cerrar la brecha digital. Mi labor se centró en fortalecer la institucionalidad local y gestionar alianzas para la cofinanciación de proyectos, sentando las bases para la <strong>implementación de sistemas tecnológicos</strong> que garantizaran el acceso de todos los ciudadanos a servicios digitales, incluyendo la justicia, con un enfoque diferencial para comunidades estratégicas.</p>
-            </div>
-             <div class="job">
-                 <p class="job-company">ICETEX</p>
-                <p class="job-title">Secretaria General</p>
-                <p class="job-period">2020 - 2022</p>
-                <p class="job-description">Lideré el estudio técnico para la transformación de la <strong>arquitectura organizacional</strong> de la entidad, propuesta aprobada por la Junta Directiva y validada por DAFP y MinHacienda. Impulsé la <strong>estructuración de procedimientos</strong> clave, modernizando la gestión de contratación, la función disciplinaria y el sistema documental con la <strong>implementación de tecnología</strong> (Orfeo). Lideré la transformación del talento humano, implementando la política de teletrabajo y actualizando la OPEC para la provisión de más de 100 cargos por mérito.</p>
-            </div>
-            <div class="job">
-                 <p class="job-company">Ministerio de Defensa Nacional</p>
-                <p class="job-title">Directora de Contratación Estatal</p>
-                <p class="job-period">2018 - 2020</p>
-                <p class="job-description">Ejercí la <strong>dirección estratégica</strong> de la contratación del sector, un componente clave de la <strong>ejecución presupuestal</strong>. Lideré una reorganización interna y actualicé la política de contratación (Directiva 12/2020), generando ahorros significativos en compras estratégicas y promoviendo la contratación centralizada vía Acuerdos Marco de gran escala. Gestioné alianzas estratégicas con el sector minero-energético que representaron aportes multimillonarios.</p>
-            </div>
-            <div class="job">
-                <p class="job-company">Ministerio de Tecnologías de la Información y las Comunicaciones</p>
-                <p class="job-title">Directora de Vigilancia y Control / Jefe Oficina Jurídica</p>
-                <p class="job-period">2015 - 2018</p>
-                <p class="job-description">Dirigí la defensa jurídica del Ministerio y, desde la Dirección de Vigilancia y Control, lideré la creación e implementación de <strong>PrevenTIC</strong>, una innovadora <strong>política pública</strong> (Res. 3160 de 2017) diseñada para transformar el modelo de supervisión tradicional hacia uno preventivo, fomentando la cultura del cumplimiento normativo en el sector. Esta iniciativa fue clave en la <strong>formulación de normatividad</strong> y políticas para la expansión de la infraestructura tecnológica nacional.</p>
-            </div>
-            <div class="job">
-                <p class="job-company">Defensoría del Pueblo</p>
-                <p class="job-title">Jefe de Oficina Jurídica</p>
-                <p class="job-period">2014 - 2015</p>
-                <p class="job-description">Dirigí la estrategia de defensa jurídica de la entidad, <strong>estructurando procedimientos</strong> para la defensa de los derechos humanos ante el sistema judicial y coordinando la representación de la entidad.</p>
+            <div class="experience-grid">
+                <div class="job">
+                    <p class="job-company">Ministerio de Justicia y del Derecho</p>
+                    <p class="job-title">Directora Jurídica</p>
+                    <p class="job-period">2025 - Actualidad</p>
+                    <p class="job-description">Ejerzo la dirección estratégica en la <strong>formulación de políticas públicas y normatividad</strong> del sector. Actualmente estoy liderando la implementación de herramientas de automatización e <strong>Inteligencia Artificial</strong> para acelerar procesos de cobro coactivo.</p>
+                </div>
+                <div class="job">
+                    <p class="job-company">Instituto Nacional de Vías - INVIAS</p>
+                    <p class="job-title">Secretaria General</p>
+                    <p class="job-period">2023 - 2025</p>
+                    <p class="job-description">Asumí la dirección estratégica durante una crisis de déficit presupuestal. Lideré la <strong>planeación y ejecución presupuestal</strong>, incluyendo el trámite de <strong>empréstitos</strong> y optimización del flujo de caja, logrando una <strong>reducción sustancial del déficit</strong>. Finalicé en tiempo récord el concurso que vinculó a más de 300 funcionarios de carrera.</p>
+                </div>
+                 <div class="job">
+                    <p class="job-company">Ministerio de Tecnologías de la Información y las Comunicaciones</p>
+                    <p class="job-title">Jefe de la Oficina de Fomento Regional de las TIC</p>
+                    <p class="job-period">2022 - 2023</p>
+                    <p class="job-description">Articulé la <strong>formulación de planes regionales</strong> para cerrar la brecha digital y fortalecer la institucionalidad en los territorios, sentando las bases para la <strong>implementación de sistemas tecnológicos</strong> y el acceso ciudadano a servicios digitales.</p>
+                </div>
+                 <div class="job">
+                     <p class="job-company">ICETEX</p>
+                    <p class="job-title">Secretaria General</p>
+                    <p class="job-period">2020 - 2022</p>
+                    <p class="job-description">Lideré el estudio técnico para la transformación de la <strong>arquitectura organizacional</strong> de la entidad. Impulsé la <strong>estructuración de procedimientos</strong> clave, modernizando la gestión de contratación y la función disciplinaria con la <strong>implementación de tecnología</strong> (Orfeo), y actualizando la OPEC para la provisión de más de 100 cargos por mérito.</p>
+                </div>
+                <div class="job">
+                     <p class="job-company">Ministerio de Defensa Nacional</p>
+                    <p class="job-title">Directora de Contratación Estatal</p>
+                    <p class="job-period">2018 - 2020</p>
+                    <p class="job-description">Ejercí la <strong>dirección estratégica</strong> de la contratación del sector, un componente clave de la <strong>ejecución presupuestal</strong>. Lideré una reorganización interna y actualicé la política de contratación (Directiva 12/2020), generando ahorros significativos y promoviendo la contratación centralizada vía Acuerdos Marco de gran escala.</p>
+                </div>
+                <div class="job">
+                    <p class="job-company">Ministerio de Tecnologías de la Información y las Comunicaciones</p>
+                    <p class="job-title">Directora de Vigilancia y Control / Jefe Oficina Jurídica</p>
+                    <p class="job-period">2015 - 2018</p>
+                    <p class="job-description">Dirigí la defensa jurídica del Ministerio en el trámite arbitral de Reversión de Infraestructura de Comunicaciones, logrando un <strong>fallo histórico a favor de la Nación (2017) por 4 billones de pesos</strong>. Lideré la creación de la innovadora política pública <strong>PrevenTIC</strong> para transformar el modelo de vigilancia y control del sector.</p>
+                </div>
+                <div class="job">
+                    <p class="job-company">Defensoría del Pueblo</p>
+                    <p class="job-title">Jefe de Oficina Jurídica</p>
+                    <p class="job-period">2014 - 2015</p>
+                    <p class="job-description">Dirigí la estrategia de defensa jurídica de la entidad, unificando el criterio legal y liderando la política de <strong>prevención del daño antijurídico</strong>. Fui responsable de la conceptualización jurídica, la elaboración de proyectos normativos y la <strong>estructuración de procedimientos</strong> para la defensa de los derechos humanos.</p>
+                </div>
+                 <div class="job">
+                    <p class="job-company">Entidades del Orden Nacional y Distrital</p>
+                    <p class="job-title">Asesora Jurídica</p>
+                    <p class="job-period">2001 - 2014</p>
+                    <p class="job-description">Durante más de una década, consolidé mi experiencia en la <strong>gestión administrativa pública</strong> y la defensa jurídica del Estado. Como asesora, mi labor se centró en la <strong>estructuración de procedimientos administrativos y de contratación estatal</strong>, asi como el respaldo legal en la <strong>formulación de políticas públicas</strong>, sentando las bases de mi carrera directiva.</p>
+                </div>
             </div>
         </section>
 
@@ -334,4 +378,5 @@
 
 </body>
 </html>
+
 
